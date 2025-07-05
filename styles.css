@@ -1,0 +1,250 @@
+html{  scroll-behavior: smooth;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+}
+.container {
+    width: 80%;
+    background-color: #D7B520;
+    border: 2px solid #74af4c;
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    grid-template-columns: 30% 1fr;
+    grid-template-areas:
+    "header header header header header header"
+    "aside main1 main1 main1 main1 main1"
+    "aside main1 main1 main1 main1 main1"
+    "aside main2 main2 main2 main2 main2"
+    "aside main2 main2 main2 main2 main2"
+    "aside main3 main3 main3 main3 main3"
+    "aside main3 main3 main3 main3 main3"
+    "footer footer footer footer footer footer"
+}
+
+.image2 {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 3em 3em 1em 1em;
+  border: 3px solid #41719c;
+  border-radius: 1em;
+}
+
+footer{
+    display: grid;
+    grid-area: footer;
+    background-color: #e7e6e6;
+    border: 3px solid #41719c;
+    border-radius: 1em;
+    place-items: center;
+    font-weight: bold;
+}
+aside{
+    background-color: #5b9bd5;
+    border: 3px solid #41719c;
+    border-radius: 3em;
+}
+aside nav ul{
+    height: 100%;
+    padding: 20px;
+    line-height: 2em;
+    margin: 20px;
+    list-style-type: none;
+    text-align: center;
+}
+aside nav ul a{
+    line-height: 3em;
+    margin: 8px;
+    text-decoration: none;  
+    border: 2px solid #74af4c;
+    border-radius: 5px;
+    background-color: #D7B520; 
+}
+aside nav ul a:hover{
+    background-color: #ba9800;
+}
+
+
+.form-container{
+display: grid;
+grid-area: aside;
+border-radius: 1em;
+line-height: 2em;
+place-items: center;
+
+
+}
+form label{
+display: grid;
+grid-area: aside;
+place-items: left;
+}
+
+#balaton{
+    background-color: #fbe5d6;
+    border: 3px solid #41719c;
+    border-radius: 3em;
+}
+
+#tisza-to{
+background-color: #fff2cc;
+border: 3px solid #41719c;
+border-radius: 3em;
+}
+
+#szelidi-to{
+background-color: #deebf7;
+border: 3px solid #41719c;
+border-radius: 3em;
+}
+
+.container-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: auto auto;
+    gap: 20px;
+}
+
+.text-container .image {
+    float: left;             
+    margin-right: 20px;       
+    margin-bottom: 10px;    
+    border-radius: 1em;     
+    width: 30%;             
+    height: auto;
+}
+
+#text1 {
+    line-height: 1.6;
+    color: #1301FF;
+    text-align: left;
+    line-height: 1.5em;
+    padding: 5px;
+    margin-right: 5px;
+    clear: both;    
+}
+
+#text2{
+    line-height: 1.6;
+    color: #9500FF;
+    text-align: left;
+    line-height: 1.5em;
+    padding: 5px;
+    margin-right: 5px;
+    clear: both;    
+}
+#text3{
+    line-height: 1.6;
+    color: #004DFF;
+    text-align: left;
+    line-height: 1.5em;
+    padding: 5px;
+    margin-right: 5px;
+    clear: both;    
+}
+
+.urlap{
+    color: black;
+}
+footer p,
+footer h2 {
+    color: black;
+}
+
+.image {
+  width: 100%;
+  border-radius: 2em;
+  object-fit: cover;
+}
+h1{
+    text-align:center;
+font-size: 2.5em; 
+}
+h2 {
+font-style: italic;
+text-align:center;
+font-size: 1.2em; 
+}
+
+header{
+    grid-area: header
+}
+aside{
+    grid-area: aside
+}
+#balaton{
+    grid-area: main1
+}
+#tisza-to{
+    grid-area: main2
+}
+#szelidi-to{
+    grid-area: main3
+}
+footer{
+    grid-area: footer
+}
+
+.back{
+    position: fixed;
+    bottom: 20px;
+    right: 10%;
+}
+
+.back{
+    background-color: orangered;
+    opacity: 0.8;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;  /* Kisebb felbontásoknál a konténer kitölti a teljes szélességet */
+        padding: 10px;  /* Csökkentett padding */
+        display: block;  /* Eltérünk a grid-től, hogy egy oszlopos elrendezés legyen */
+    }
+
+    .container-wrapper {
+        display: block;  /* Eltérünk a grid-től és egy oszlopos elrendezés lesz */
+    }
+
+    /* Képek méretének beállítása */
+    .text-container .image {
+        width: 100%;  /* Képek teljes szélességben */
+        margin-bottom: 15px;  /* Kép és szöveg közötti távolság */
+    }
+
+    /* A fő tartalomnak és az oldalsávnak 100%-os szélességet adunk */
+    header, aside, .container-wrapper, footer {
+        width: 100%;
+    }
+}
+
+/* Nagyon kicsi képernyők esetén */
+@media (max-width: 480px) {
+    .container {
+        padding: 5px;  /* Még kisebb padding */
+    }
+
+    .text-container .image {
+        width: 100%;  /* Képek teljes szélességben */
+    }
+
+    .container-wrapper {
+        display: block;  /* Egy oszlopos elrendezés */
+    }
+
+    header, aside, .container-wrapper, footer {
+        width: 100%;  /* Minden elem 100%-os szélesség */
+    }
+}
