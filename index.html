@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Nyaralás</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Nyár 2025</h1>
+            <img class="image2" src="img/strand.jpg" alt="Strandolós kép">
+        </header>
+
+        
+        <aside>
+            <nav>
+                <input type="checkbox" id="menu" />
+                <label for="menu"></label>
+                <div class="menu-content">
+                <ul>
+                    <li><a href="#balaton">Balaton</a></li>
+                    <li><a href="#tisza-to">Tisza-tó</a></li>
+                    <li><a href="#szelidi-to">Szelidi-tó</a></li>
+                </ul>
+                </div>
+            </nav>
+            <div class="form-container">
+                <p class="urlap">Kérem töltse ki a jelentkezési űrlapot!</p>
+                <form action="get">
+                    <label for="name">Név:</label>
+                    <input type="text" id="name" placeholder="Név" required maxlength="100">
+
+                    <label for="email">E-mail-cím:</label>
+                    <input type="email" id="email" placeholder="e-mail" required maxlength="100">
+
+                    <label for="phone">Telefonszám:</label>
+                    <input type="tel" id="phone" placeholder="+36" required minlength="15">
+
+                    <label for="lake">Melyik tó érdekli?</label>
+                    <select name="lake" id="lake" name="lake">
+                        <option value="balaton">Balaton</option>
+                        <option value="tisza-to">Tisza-tó</option>
+                        <option value="szelidi-to">Szelidi-tó</option>
+                    </select>
+
+                    <label for="accomodation">Milyen szállást keres?</label>
+                    <select name="accomodation" id="accomodation">
+                        <option value="szalloda">Szálloda</option>
+                        <option value="apartman">Apartmanház</option>
+                        <option value="kemping">Kemping</option>
+                    </select>
+
+                    <label for="Ellátás">Milyen ellátás legyen</label>
+                    <select name="Ellátás" id="Ellátás">
+                        <option value="teljes">Teljes</option>
+                        <option value="fel-panzio">Fél panzió</option>
+                        <option value="csak-reggeli">csak reggeli</option>
+                        <option value="nem-kérek-ellátást">Nem kérek ellátást</option>
+                    </select>
+
+                    <textarea name="message" rows="10" cols="30" placeholder="Egyéb üzenet:"
+                        style="resize: none;"></textarea> <br>
+                    <button type="submit">Mehet</button>
+
+                </form>
+            </div>
+        </aside>
+        <div class="container-wrapper" id="balaton">
+
+            <div class="text-container">
+                <h2>Balaton</h2>
+                <p id="text1"> A Balaton Magyarország legnagyobb tava, és az egyik legismertebb nyaralóhely. A tó körüli
+                    települések
+                    évszázadok óta vonzzák a látogatókat, akik a pihenés mellett aktív kikapcsolódásra is vágyakoznak. A
+                    Balaton vize sekély, így a családok számára is ideális választás, hiszen a kisgyerekek is
+                    biztonságosan fürödhetnek. <img class="image" src="img/balaton.jpg" alt="Balaton">A vízi sportok
+                    szerelmesei számára is bőven kínál lehetőségeket, mint
+                    például a vitorlázás, szörfözés, és kajakozás. A Balaton partján számos borászat található, így a
+                    borkedvelők is élvezhetik a helyi borokat és gasztronómiát. A nyári hónapokban rengeteg rendezvény,
+                    fesztivál és koncert várja a látogatókat. A Balaton észak- és déli partja között is eltérő
+                    élményeket kínál, mindkét oldalon különleges tájakkal és hangulatos városokkal. A Balaton környékén
+                    több nemzeti park is található, ahol a természet szerelmesei gyönyörködhetnek a helyi flórában és
+                    faunában. Az aktív turizmus mellett a tó környéki pihenőhelyek és wellness hotelek is népszerűek. A
+                    Balaton télen is vonzó úti cél lehet, mivel a téli séták és a havas táj különleges élményt adnak.
+                </p>
+            </div>
+        </div>
+        <div class="container-wrapper" id="tisza-to">
+
+            <div class="text-container">
+                <h2>Tisza-tó</h2>
+                <p id="text2"> A Tisza-tó egy mesterségesen kialakított tó, amely a Tisza folyó mentén található, és igazi
+                    paradicsoma a vízi sportok szerelmeseinek. A tó ideális hely a kajakozók, kenuzók és horgászok
+                    számára, hiszen tiszta vize és gazdag halállománya különleges élményt kínál.
+                    <img class="image" src="img/tisza-to.jpg" alt="Tisza-tó">A Tisza-tó környékén
+                    rengeteg madárfaj talál menedéket, így a madármegfigyelők is megtalálják itt a számításaikat. A
+                    terület gazdag természetvédelmi területekben, és számos túraútvonalat kínál a gyalogos és kerékpáros
+                    turisták számára is. A Tisza-tó partján található települések, mint Tiszafüred és Poroszló, a vidéki
+                    élet hangulatát árasztják, és kitűnő helyek a pihenésre. A tó központi területein sétahajózások és
+                    vízitúrák kínálnak fel egyedi élményeket. A tó körüli fák és nádasok festői szépsége ideális
+                    helyszínt biztosítanak a fotósok számára. A Tisza-tó környéke az év minden szakában vonzó célpont,
+                    mivel minden évszak más és más hangulatot ad a tájnak. A környéken található kis kávézók és éttermek
+                    remek helyek, hogy élvezd a helyi ételeket és italokat. A Tisza-tó a természet kedvelőinek és a vízi
+                    sportok rajongóinak egyaránt ideális választás.
+                </p>
+            </div>
+        </div>
+
+        <div class="container-wrapper" id="szelidi-to">
+
+            <div class="text-container">
+                <h2>Szelidi-tó</h2>
+                <p id="text3">A Szelidi-tó egy rejtett gyöngyszem a Duna-Tisza közi homokhátság területén, amely a természet
+                    szerelmeseit vonzza. A tó környéke különösen a családok számára ideális pihenőhely, hiszen nyugodt
+                    és csendes környezetet kínál. A Szelidi-tó vize magas ásványianyag-tartalmú, így különleges élményt
+                    ad a fürdőzőknek, akik a víz jótékony hatásait élvezhetik. A tó körüli erdők friss levegője és a
+                    természet közelsége igazi feltöltődést biztosít. <img class="image" src="img/szelidi-to.jpg"
+                        alt="Szelidi-tó">A Szelidi-tó partján található strandok és
+                    kempingek lehetőséget biztosítanak a táborozásra és a szabadtéri programokra. A vízparti sétautak és
+                    piknikező helyek nagyszerű lehetőséget kínálnak a pihenésre és a szabadtéri étkezésekre. A tó
+                    partján számos horgászhely is található, így a horgászat szerelmesei is élvezhetik a csendes
+                    vízparti élményeket. A Szelidi-tó környékén néhány kisebb falu található, amelyek hagyományos vidéki
+                    hangulattal várják a látogatókat. A tó partján található kis kávézók és éttermek remek helyet
+                    biztosítanak a helyi specialitások kipróbálására. A Szelidi-tó különösen a nyári hónapokban
+                    népszerű, de tavasszal és ősszel is ideális pihenőhely a természet szerelmeseinek.</p>
+            </div>
+        </div>
+        <a href="#">
+        <div class="sticky"><p class="back">Vissza a lap tetejére</p></div></a> 
+        <footer>
+            <p>&copy; 2025 Strandolós oldal. Minden jog fenntartva.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
