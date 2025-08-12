@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"  rel="stylesheet">
+    <title>Tasty Burger</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <nav class="nav">
+        <span class="material-symbols-outlined" >
+lunch_dining
+</span>
+        <ul class="navigation">
+            <li><a href="index.html">Kezdőlap</a></li>
+            <li><a href="menu.html">Étlap</a></li>
+            <li><a href="drinks.html">Itallap</a></li>
+            <li><a href="gallery.html">Galéria</a></li>
+            <li><a href="contact.html">Kapcsolat</a></li>
+        </ul>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <script src="js/script.js"></script>
+    </nav>
+    <div class="grid-container">
+        <header>
+            <h1>Mindenhol jó, de legjobb nálunk</h1>
+        </header>
+        <main>
+            
+            <h2>Asztalfoglalás</h2>
+
+            <div class="content_reservation">
+            <aside><img id="content_img" src="img/Mia_etlap.jpg" alt="Mia"></aside>
+            <div id="form">
+            <form action="GET">
+                <label for="name">Kérlek add meg a neved:</label>
+                <input type="text" id="name" placeholder="Név" >
+
+                <label for="mobil">Telefonszámod:</label>
+                <input type="number" id="mobil" placeholder="+36" >
+
+                <label for="date">Foglalj Napot:</label>
+                <input type="date" id="date">
+
+                <label for="time">Foglalj Időpont:</label>
+                <input type="time" id="time" step="900" min="08:00" max="23:00">
+
+                <label for="asztalfoglalas">Hány főre szeretnél asztalt:</label>
+                <select name="name" id="asztalfoglalas">
+                    <option value="one">1 Főre</option>
+                    <option value="two">2 Főre</option>
+                    <option value="three">3 Főre</option>
+                    <option value="four">4 Főre</option>
+                    <option value="five">5 Főre</option>
+                    <option value="six">6 Főre</option>
+                    <option value="morethansix">6-nál több Főre</option>
+                </select>
+                
+
+
+                <label for="e-mail">E-mail címed:</label>
+                <input type="email" id="e-mail">
+
+                <input type="submit" value="Foglalás">
+            </form>
+            </div>
+            </div>
+
+            <h2>Elérhetőségeink:</h2>    
+        <aside> 
+               
+            <div class="map">
+                <iframe id="google_map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d168.4426089648123!2d19.025257885615!3d47.50779925794102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dd540cd1a5cd%3A0xf785a414ee659e9d!2zS2lyw6FseSBLw7Z6cG9udA!5e0!3m2!1shu!2shu!4v1753013276941!5m2!1shu!2shu"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="kapcsolat">
+               
+            <h4>Címünk</h4>
+            Budapest, Margit körút 99, 1024
+            <h4> <a href="tel:+4733378901">+47 333 78 901</a> </h4>
+
+            <h4>E-mail címünk: tasty.burgers@gmail.com</h4>
+            <a href="mailto:tasty.burgers@gmail.com">Írj nekünk!</a>
+            </div>
+        </aside>
+            <div class="nyitvatartas">
+                
+
+            <h2>Nyitva tartás:</h2>
+
+            <p>   Hétfő Zárva</p>
+            <p> Kedd-Vasárnap 12:00-24:00</p> 
+
+            <h2>A KONYHA NYITVA TARTÁSA:</h3>
+            <p>Vasárnap-Szerda 12:00-22:30</p>
+            <p>Csütörtök-Szombat 12:00-23:00</p> 
+
+            </div>  
+            
+        </main>
+        <footer>
+            
+        </footer>
+    </div>
+
+</body>
+</html>

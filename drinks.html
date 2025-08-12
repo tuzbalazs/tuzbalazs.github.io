@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"  rel="stylesheet">
+    <title>Tasty Burger</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="nav">
+        <span class="material-symbols-outlined">
+lunch_dining
+</span>
+        <ul class="navigation">
+            <li><a href="index.html">Kezdőlap</a></li>
+            <li><a href="menu.html">Étlap</a></li>
+            <li><a href="drinks.html">Itallap</a></li>
+            <li><a href="gallery.html">Galéria</a></li>
+            <li><a href="contact.html">Kapcsolat</a></li>
+        </ul>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <script src="js/script.js"></script>
+    </nav>
+    <div class="grid-container">
+        <header> 
+            <h1><img class="icon" src="img/film-movie-icon.png" alt="movie.icon"> „A második felvonás” <img class="icon" src="img/movie-svgrepo-com.png" alt="rolling_1"></h1>
+        </header>
+         <main>     
+                <h2>Üdv a Tasty Burger!</h2>
+                <p>Éttermünket olyan helynek szánjuk, ahova mi magunk
+                    is szívesen beülnénk, ahol mindenki úgy érezheti magát, mintha otthon
+                    bulizna a barátaival.
+
+                    Mi gondoskodunk a hozzávalókról, ti csak
+                    dőljetek hátra, és élvezzétek a kikapcsolódást!</p>
+             <table id="menu">
+                <tr class="menu1">
+                    <th>Koktéljaink</th>
+                    <th>Ismertető</th>
+                    <th>Ár</th>
+                </tr>
+                <tr class="menu2"> 
+                    <td>Mia’s Favorite</td>
+                    <td>Absolut Vanilia vodka, Passoa, passion fruit püré, fehércsoki szirup, lime, prosecco – Mia Wallace is ez inná</td>
+                    <td class="td3">3000 Ft</td>
+                </tr>
+                <tr class="menu2">
+                    <td>Vega’s Garden</td>
+                    <td>Hendrick’s gin, Bols Peach likőr, grapefruit tonic, lime, bazsalikom hab</td>
+                    <td class="td3">3500 Ft</td>
+                </tr>
+                <tr class="menu2">
+                    <td>The Bonnie Situation</td>
+                    <td>Mezcal, Cointreau, lime</td>
+                    <td class="td3">3500 Ft</td>
+                </tr>
+                <tr class="menu2">
+                    <td>Big Kahuna Break</td>
+                    <td>Monkey Shoulder whiskey, pandan szirup, kókusz szirup, ananászlé, lime</td>
+                    <td class="td3">4000 Ft</td>
+                </tr>
+                <tr class="menu2">
+                    <td>Jack Rabbit Martini</td>
+                    <td>Bols Marine vodka, licsi likőr, levendula szirup, prosecco</td>
+                    <td class="td3">4500 Ft</td>
+                </tr>
+                 <tr class="menu2">
+                    <td>The Wolf</td>
+                    <td>Hendrick’s Grand Cabaret, Campari, vermut</td>
+                    <td class="td3">4800 Ft</td>
+                </tr>
+             </table>
+                <h2>Válassz kínálatunkból:</h2>
+                <div class="flex-container">
+                        <div class="flex-item">
+                            <h3 class="flex_h3">Mia’s Favorite</h3>
+                            <div class="box">
+                            <img class="img_flex" src="img/Mia’s Favorite.jpg" alt="Mia's Shake">
+                                <ul id="section1" class="ul_flex">
+                                    <li class="menu_li_flex">Absolut Vanilia vodka</li>
+                                    <li class="menu_li_flex">Passoa</li>
+                                    <li class="menu_li_flex">Passion fruit püré</li>
+                                    <li class="menu_li_flex">Fehércsoki szirup</li>
+                                    <li class="menu_li_flex">Lime</li>
+                                    <li class="menu_li_flex">Prosecco</li>
+                                </ul>
+                        </div>
+                        </div>
+                        <div class="flex-item">
+                            <h3 class="flex_h3">Vega’s Garden</h3>
+                            <div class="box">
+                            <img class="img_flex" src="img/Vega’s Garden.jpg" alt="Vincent Shake">
+                            <ul class="ul_flex">
+                                <li class="menu_li_flex">Hendrick’s gin</li>
+                                <li class="menu_li_flex">Bols Peach likőr</li>
+                                <li class="menu_li_flex">Grapefruit tonic</li>
+                                <li class="menu_li_flex">Lime</li>
+                                <li class="menu_li_flex">Bazsalikom hab</li>
+                            </ul>
+                        </div>
+                        </div>
+                        <div class="flex-item">
+                            <h3 class="flex_h3">The Bonnie Situation</h3>
+                            <div class="box">
+                            <img class="img_flex" src="img/The Bonnie Situation.jpg" alt="The Bonnie Situation">
+                            <ul class="ul_flex">
+                                <li class="menu_li_flex">Mezcal</li>
+                                <li class="menu_li_flex">Cointreau</li>
+                                <li class="menu_li_flex">Lime</li>
+                            </ul>
+                        </div>
+                        </div>
+                        <div class="flex-item">
+                            <h3 class="flex_h3">Big Kahuna Break</h3>
+                            <div class="box">
+                            <img class="img_flex" src="img/Big Kahuna Break.jpg" alt="Big Kahuna Shake">
+                            <ul class="ul_flex">
+                                <li class="menu_li_flex">Monkey Shoulder whiskey</li>
+                                <li class="menu_li_flex">Pandan szirup</li>
+                                <li class="menu_li_flex">Kókusz szirup</li>
+                                <li class="menu_li_flex">Ananászlé</li>
+                                <li class="menu_li_flex">Lime</li>
+                            </ul>
+                        </div>
+                        </div>
+                        <div class="flex-item">
+                            <h3 class="flex_h3">Jack Rabbit Martini</h3>
+                            <div class="box">
+                            <img class="img_flex" src="img/Jack Rabbit Martini.jpg" alt="Jack Rabbit Martini">
+                            <ul class="ul_flex">
+                                <li class="menu_li_flex">Bols Marine vodka</li>
+                                <li class="menu_li_flex">Licsi likőr</li>
+                                <li class="menu_li_flex">Levendula szirup</li>
+                                <li class="menu_li_flex">Prosecco</li>
+                            </ul>
+                        </div>
+                        </div>
+                        <div class="flex-item">
+                            <h3 class="flex_h3">The Wolf</h3>
+                            <div class="box">
+                            <img class="img_flex" src="img/The Wolf.jpg" alt="The Wolf">
+                            <ul class="ul_flex">
+                                <li class="menu_li_flex">Hendrick’s Grand Cabaret</li>
+                                <li class="menu_li_flex">Campari</li>
+                                <li class="menu_li_flex">Vermut</li>
+                            </ul>
+                        </div>
+                        </div>
+                </div>
+                <h2>Nézz szét a galériánkban, ahol megtalálod a büszkeségeinket : <a href="gallery.html">Irány a Galéria!</a></h2>
+        
+        </main>
+        <footer></footer>
+    </div>
+
+</body>
+
+</html>

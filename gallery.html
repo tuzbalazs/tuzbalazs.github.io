@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"  rel="stylesheet">
+    <title>Tasty Burger</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <nav class="nav">
+        <span class="material-symbols-outlined">
+lunch_dining
+</span>
+        <ul class="navigation">
+            <li><a href="index.html">Kezdőlap</a></li>
+            <li><a href="menu.html">Étlap</a></li>
+            <li><a href="drinks.html">Itallap</a></li>
+            <li><a href="gallery.html">Galéria</a></li>
+            <li><a href="contact.html">Kapcsolat</a></li>
+        </ul>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+    <div class="grid-container">
+        <header>
+            <h1>“This is a tasty burger.” – Jules Winnfield</h1>
+        </header>
+        <main>
+            <div class="gallery_grid">
+            <img src="img/img_gallery.jpg" alt="Kicsi kép 1" class="image">
+            <img src="img/img_gallery2.jpg" alt="Kicsi kép 1" class="image">
+            <img src="img/img_gallery3.jpg" alt="Kicsi kép 1" class="image">
+            <img src="img/img_gallery4.jpg" alt="Kicsi kép 1" class="image">
+            <img src="img/img_gallery5.jpg" alt="Kicsi kép 1" class="image">
+            <img src="img/img_gallery6.jpg" alt="Kicsi kép 1" class="image">
+            <img src="img/img_gallery7.jpg" alt="Kicsi kép 1" class="image">
+            <img src="img/img_gallery8.jpg" alt="Kicsi kép 1" class="image">           
+            <img src="img/img_gallery9.jpg" alt="Kicsi kép 1" class="image">
+            </div>
+            <!-- A modális ablak a nagy képpel -->
+            <div id="modal">
+                <span id="close">&times;</span>
+                <img id="fullImage">
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
