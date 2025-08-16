@@ -3,6 +3,8 @@ function toggleMenu() {
 }
 
 
+
+
 // Hivatkozások a DOM elemekhez
 const modal = document.getElementById("modal");
 const fullImage = document.getElementById("fullImage");
@@ -29,3 +31,9 @@ window.onclick = function(event) {
         modal.style.display = "none";  // Elrejti a modált
     }
 };
+
+
+
+
+
+
