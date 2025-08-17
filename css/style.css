@@ -12,6 +12,7 @@ body{
     font-size: 20px;
     width: 90%;
     margin: 0 auto;
+    padding: 0;
 }   
 
 /* navigáció rész */
@@ -61,24 +62,24 @@ div.hamburger div{
     margin: 4px;
 }
 /* drinks.html rész */
-.flex-container{
+.container{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
+    align-content: space-evenly;
     justify-content: center;
-    align-items: center; 
     gap: 20px;
 }
-.flex-container .flex-item {
-    width: 600px;
+.container .flex-item {
+    width: 400px;
     margin: 10px;
     text-align: center;
     background-color: #f69903;
     padding: 15px;
     border-radius: 15px;
     transition: transform 3s ease;
+    
 }
-.flex-container .flex-item:hover {
+.container .flex-item:hover {
     border: solid 5px gray;
     box-shadow: 8px 8px 10px rgb(239, 236, 236);
     transform: scaleY(102%);
@@ -87,9 +88,11 @@ div.hamburger div{
 .box {
     display: flex;
     gap: 10px;
-    flex-wrap: wrap; /* mobilbarát */
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center; 
 }
-.flex-container .flex-item .box .ul_flex {
+.container .flex-item .box .ul_flex {
     list-style-type: disc;
     text-align: justify;
     max-width: 300px;
@@ -106,9 +109,11 @@ div.hamburger div{
 
 .img_flex{
     border-radius: 10px;
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     border: solid 3px gray;
+    align-items: center; 
+    justify-content: center;
     
 }
 .img_flex:hover{
@@ -119,30 +124,45 @@ div.hamburger div{
     margin-bottom: 10px;
 }
 /* contact.html rész */
-.content_reservation{
+.flex-container_contact{
     display: flex;
-    padding: 5px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.reservation{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    align-content: stretch;
+    gap:10px;
+    padding: 20px;
     background-color:  #f0d92e;
     color: #333;
     border: dotted 3px #1e1e1e;
     border-radius: 15px;
     box-shadow: 5px 5px 10px rgb(136, 247, 9);
     justify-content:space-between;
+    width: 90%;
 }
-#content_img{
-    width: auto;
-    height: 28em;
-    border-radius: 60px;
-    margin: 20px;
+#content_img {
+    height: auto;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    margin: 0;
 }
-div#form{
+div#form {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin: 0;
+    border-radius: 15px;
     background-color:  rgba(255, 72, 0, 0.83);
     box-shadow: 3px 3px 5px rgb(255, 132, 0);
-    padding: 10px;
-    margin: 20px;
-    width: 50%;
-    border-radius: 15%;
-    justify-content: center;
 }
 label{
     display: block;
@@ -176,23 +196,42 @@ input[type=submit]:hover{
     background-color: rgb(77, 72, 72);
     font-weight: bold;
 }
-aside{
+.contact {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 10px;
+    padding: 30px;
 }
-#google_map{
-    display: block;
-    margin: 0 auto;
-    border-radius: 20px;
-    margin: 20px;
+
+.map, .kapcsolat {
+    flex: 1 1 400px;   /* rugalmas, de minimum 400px */
+    height: 400px;
+    box-sizing: border-box;
+    border-radius: 15px;
 }
-.kapcsolat{
-    display: block;
-    margin: 0 auto;
-    border: solid 4px #f69903;
-    padding: 10px;
-    margin: 20px;
-    border-radius: 20px;
+
+/* Beágyazott térkép formázása */
+.google_map {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
 }
+
+/* Kapcsolati info doboz formázása */
+.kapcsolat {
+    background-color: rgba(255, 72, 0, 0.83);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid yellow;
+}
+
 h4{
     color: azure;
     margin: 20px;
@@ -210,7 +249,8 @@ h4{
     margin-bottom: 20px;
     padding-top: 25px;
     width: 100%;
-    text-align: center;
+    justify-content: center;
+    align-items: center; 
     display: flex;
 }
 .dancing_img1{
@@ -248,10 +288,6 @@ h4{
 .icon{
     max-width: 200px;
     max-height: 250px;
-}
-
-.menu_magyarazat{
-    border-top: #f0d92e solid 10px;
 }
 .menu_li {
   color: #333;
@@ -302,7 +338,31 @@ border-radius: 20px;
 opacity: 0.7;
 }
 /* index.html rész */
-h1, .alcim{
+.flex-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding-bottom: 40px;
+}
+.items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: stretch;
+  gap: 20px;
+  margin-bottom: 10px;
+  flex-direction: row;
+}
+.flex_text{
+    width: 900px;
+    margin-bottom: 20px;
+    text-align: justify; 
+    gap: 10px;
+    padding: 20px;
+}
+
+h1{
     color: #f0d92e;
     font-size: 2em;
     font-weight: bold;
@@ -325,73 +385,31 @@ h1, .alcim{
 .cim_h2:nth-of-type(even) {
     transform: rotate(3deg);
 }
-
 .cim_h2:nth-of-type(odd) {
     transform: rotate(-3deg);
 }
-
 .cim_h2::first-letter {
     text-transform: uppercase;
 }
 .cim_h2:hover{
     color: #d4cea5;
 }
-
 a{
     text-decoration: none;
     color:#070707;   
 }
-.burgerek_img_float_left{
-    padding: 5px;
-    float: left;
-    width: 20%;
-    height: 20%;
+.burgerek_img{
+    width: 25%;
+    height: 25%;
     border-radius: 10px;
-    margin-right: 20px;
+    margin: 10px;
 }
-.burgerek_img_float_right{
-    float: right;
-    width: 20%;
-    height: 20%;
-    border-radius: 10px;
-    margin-left: 20px;
-}
-.left_text .right_text{
-    text-align: justify;
-    overflow: hidden;
-}
-
-#bevezeto1{
-    margin-bottom: 20px;
-    text-align: justify; 
-}
-#bevezeto2{
-    margin-top: 20px;
-    text-align: justify;
-}
-
-#intro_bal_img{
-    float: left;
-    border-radius: 30%;
-    width: 20%;
-    height: 20%;
-    margin-bottom: 25px;
-    margin-right: 20px;    
-}
-#intro_jobb_img{
-    float: right;
-    border-radius: 30%;
-    width: 20%;
-    height: 60%;
-    margin-bottom: 25px;
-    margin-left: 20px;    
-}
-
  .grid-container{
+    position: relative;
     display: grid;
     margin: 0 auto;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, minmax(150px, auto));
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, minmax(50px, auto));
 }
 
 footer{
@@ -409,11 +427,15 @@ main{
     text-align: center;
 }
 /* Galéria rész*/
-.gallery_grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin: 4em;
+.gallery_flex {
+    display: flex;
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    flex-flow: row wrap;
+    align-content: space-evenly;
+    justify-content: center;
+    gap: 20px;
 }
 
 .image {
@@ -469,6 +491,8 @@ main{
 
 
 /* reszponzivitás rész */
+
+
 @media (max-width: 600px)
 {
     ul.navigation { 
@@ -487,12 +511,17 @@ ul.navigation.active{
 }
     div.hamburger{
         display: flex;
-    }  
+    } 
 }
 
+@media (max-width: 725px){
+.container .flex-item {
+        margin: 0 auto;
+    }
+} 
 
 @media (max-width: 900px) {
-  .flex-container {
+  .container {
     flex-direction: column;
   }
   main #menu{
@@ -500,13 +529,14 @@ ul.navigation.active{
   }
 }
 
-
-/* menu.html- reszponzivitás */
-
-@media (max-width: 650px)
-{   .dancing_img1 .dancing_img2{
-    position: sticky;
-    top: 10px;
-
-}
+@media (max-width: 960px) {
+  .flex-container .items{
+    flex-direction: column;
+  }
+  .flex-container_contact .reservation{
+    flex-direction: column;
+  }
+  .div#form{
+    width: 90%;
+  }
 }
