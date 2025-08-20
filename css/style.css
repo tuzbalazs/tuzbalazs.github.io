@@ -3,12 +3,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    background: url('../img/tasty_burger_restaurant.jpg') no-repeat center fixed; 
+    background-size: cover;
 
+}
 
 body{
-    background-color: rgb(235, 123, 4);
     font-family: "Alfa Slab One", serif;
-    line-height: 2;
+    line-height: 1.5;
     font-size: 20px;
     width: 90%;
     margin: 0 auto;
@@ -87,6 +90,7 @@ div.hamburger div{
 
 .box {
     display: flex;
+    flex-direction: column;
     gap: 10px;
     flex-wrap: wrap;
     justify-content: center; 
@@ -95,6 +99,7 @@ div.hamburger div{
 .container .flex-item .box .ul_flex {
     list-style-type: disc;
     text-align: justify;
+    flex-wrap: wrap;
     max-width: 300px;
     font-size: 18px;
     margin: 0;
@@ -138,15 +143,14 @@ div.hamburger div{
     align-items: center;
     justify-content: center;
     align-content: stretch;
-    gap:10px;
-    padding: 20px;
+    padding: 30px;
     background-color:  #f0d92e;
     color: #333;
     border: dotted 3px #1e1e1e;
     border-radius: 15px;
     box-shadow: 5px 5px 10px rgb(136, 247, 9);
     justify-content:space-between;
-    width: 90%;
+    width: 80%;
 }
 #content_img {
     height: auto;
@@ -204,12 +208,16 @@ input[type=submit]:hover{
     margin-top: 10px;
     padding: 30px;
 }
-
 .map, .kapcsolat {
     flex: 1 1 400px;   /* rugalmas, de minimum 400px */
     height: 400px;
     box-sizing: border-box;
     border-radius: 15px;
+}
+.nyitvatartas{
+    background-color:  rgba(255, 72, 0, 0.83);
+    border-radius: 5px;
+    border: 10px dotted rgb(8, 3, 21);
 }
 
 /* Beágyazott térkép formázása */
@@ -238,23 +246,27 @@ h4{
 }
 
 /* menu.html rész */
+.container_header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center; 
+}
 #menu_main_title {
     color: #f0d92e;
     font-size: 2em;
     font-weight: bold;
     font-family: "Alfa Slab One", serif;
     background-color: rgba(255, 72, 0, 0.83);
-    border: 20px solid rgb(36, 35, 35);
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-top: 25px;
-    width: 100%;
+    border: 15px solid rgb(36, 35, 35);
+    padding: 15px;
     justify-content: center;
     align-items: center; 
     display: flex;
+    flex-wrap: nowrap;
 }
 .dancing_img1{
-    height: 120px;
+    height: 2em;
     width: auto;
     border-radius: 15px;
     margin: 10px;
@@ -265,7 +277,7 @@ h4{
     animation-direction: reverse;
 }
 .dancing_img2{
-    height: 120px;
+    height: 2em;
     width: auto;
     border-radius: 15px;
     margin: 10px;
@@ -284,10 +296,23 @@ h4{
   50%  {right:20px; top:0px;}
   100% {right:0px; top:0px;}
 }
-
+.intro_text{
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff; 
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    margin: 30px auto;
+    font-size: 1.5em;
+    line-height: 1.5;
+    text-align: justify;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
 .icon{
-    max-width: 200px;
-    max-height: 250px;
+    max-width: 2em;
+    max-height: 2em;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .menu_li {
   color: #333;
@@ -337,47 +362,66 @@ background-color: rgba(40, 40, 40, 0.982);
 border-radius: 20px;
 opacity: 0.7;
 }
+
 /* index.html rész */
 .flex-container {
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   gap: 10px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 .items {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  align-content: stretch;
-  gap: 20px;
+  gap: 10px;
   margin-bottom: 10px;
-  flex-direction: row;
 }
 .flex_text{
-    width: 900px;
-    margin-bottom: 20px;
-    text-align: justify; 
-    gap: 10px;
+    width: 80%;
+    margin-bottom: 50px;
+    text-align: justify;
+    border-radius: 5px; 
+    gap: 15px;
     padding: 20px;
+    background-color: rgba(255, 72, 0, 0.83);
+    border: 15px dotted rgb(1, 4, 22);
 }
-
+.price_list{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(191, 39, 39);
+    text-decoration: underline;
+    padding: 10px;
+}
 h1{
     color: #f0d92e;
-    font-size: 2em;
     font-weight: bold;
     font-family: "Alfa Slab One", serif;
     background-color: rgba(255, 72, 0, 0.83);
-    border: 20px solid rgb(36, 35, 35);
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-top: 25px;
+    border: 15px solid rgb(36, 35, 35);
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-top: 15px;
     width: 100%;
     text-align: center;
 }
-.cim_h2{
+h2{
     font-size: 2em;
     color: #f0d92e;
+    text-decoration: underline;
+    text-shadow: 4px 4px #110054;
+    margin: 20px;
+    padding: 15px;
+}
+.cim_h2{
+    font-size: 2em;
+    color: #fadd00;
+    text-shadow: 4px 4px #110054;
     text-decoration: underline;
     margin: 20px;
     padding: 15px;
@@ -396,36 +440,25 @@ h1{
 }
 a{
     text-decoration: none;
-    color:#070707;   
+    color:rgb(248, 243, 243);   
 }
 .burgerek_img{
-    width: 25%;
-    height: 25%;
+    width: 30%;
+    height: 30%;
     border-radius: 10px;
-    margin: 10px;
+    margin-bottom: 30px;
+    border: solid 3px rgb(248, 243, 243);
 }
- .grid-container{
-    position: relative;
-    display: grid;
-    margin: 0 auto;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, minmax(50px, auto));
-}
-
 footer{
     background-color: rgb(36, 35, 35);
     color: #fff;
     margin: 4px;
     text-align: center;
 }
-
-main{
-    padding: 20px;
-    color: #070707;
-    background-color: rgb(233, 41, 20);
+main {
     color: rgb(255, 251, 0);
     text-align: center;
-}
+}    
 /* Galéria rész*/
 .gallery_flex {
     display: flex;
@@ -492,10 +525,9 @@ main{
 
 /* reszponzivitás rész */
 
-
 @media (max-width: 600px)
 {
-    ul.navigation { 
+  ul.navigation { 
     position: absolute;
     display: none;
     flex-direction: column;
@@ -504,14 +536,15 @@ main{
     background-color: #333;
     width: 100%;
     text-align: center;
-}
+  }
 
-ul.navigation.active{
+  ul.navigation.active {
     display: flex;
-}
-    div.hamburger{
-        display: flex;
-    } 
+  }
+
+  div.hamburger {
+    display: flex;
+  } 
 }
 
 @media (max-width: 725px){
@@ -528,15 +561,78 @@ ul.navigation.active{
     display: none;
   }
 }
+@media screen and (max-width: 960px) and (min-width: 600px) {
+  .flex-container .items {
+    flex-direction: column;
+  }
 
-@media (max-width: 960px) {
-  .flex-container .items{
+  .flex-container_contact .reservation {
     flex-direction: column;
   }
-  .flex-container_contact .reservation{
+
+  div#form {
+    width: 80%;
+    padding: 3px;
+    gap:10px;
+    margin: 10px;
+  }
+
+  .burgerek_img {
+    width: 70%;
+    height: 70%;
+}
+}
+
+@media screen and (max-width: 600px){
+  .flex-container .items {
     flex-direction: column;
   }
-  .div#form{
+
+  .flex-container_contact .reservation {
+    flex-direction: column;
+  }
+
+  div#form {
+    width: 95%;
+    padding: 3px;
+    gap:2px;
+    margin: 3px;
+  }
+  input[type], select{
+    width: 95%;
+  }
+  div #form label{
+    font-size: 0.8em;
+  }
+  input[type="submit"] {
     width: 90%;
+    font-size: 1em;
+    height: 2em;
+  }
+  .burgerek_img {
+    width: 70%;
+    height: 70%;
+  }
+  
+  #menu_main_title {
+    flex-wrap: wrap;
+    font-size: 1.5em;
+  }
+  .container .flex-item{
+    width: 300px;
+  }
+  h2{
+    font-size: 1.2em;
+  }
+  .intro_text{
+    font-size: 1em;
+  }
+  .img_flex{
+    width: 250px;
+    height: 250px;
+  }
+  .form{
+    width: 100%;
+    padding: 3px;
   }
 }

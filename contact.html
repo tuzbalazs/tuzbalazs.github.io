@@ -17,7 +17,6 @@
 <body>
     <nav class="nav">
         <span class="material-symbols-outlined sizeandcolour"> lunch_dining </span>
-</span>
         <ul class="navigation">
             <li><a href="index.html">Kezdőlap</a></li>
             <li><a href="menu.html">Étlap</a></li>
@@ -44,15 +43,15 @@
             <div id="form">
             <form action="GET">
                 <label for="name">Kérlek add meg a neved:</label>
-                <input type="text" id="name" placeholder="Név" required>
+                <input type="text" id="name" autocomplete="name" placeholder="Név" required>
 
                 <label for="mobil">Telefonszámod:</label>
-                <input type="number" id="mobil" required placeholder="+36" >
+                <input type="number" autocomplete="mobil" id="mobil" required placeholder="+36" >
 
                 <label for="date">Foglalj Napot:</label>
                 <input type="date" id="date" required>
  
-                <label for="contact-time">Foglalj Időpontot:</label>
+                <label for="timeSelect">Foglalj Időpontot:</label>
                 <select id="timeSelect" name="time" required>
                     <option value="12:00">12:00</option>
                     <option value="12:30">12:30</option>
@@ -77,7 +76,7 @@
                 </select>
 
                 <label for="asztalfoglalas">Hány főre szeretnél asztalt:</label>
-                <select name="name" id="asztalfoglalas" required>
+                <select name="name" autocomplete="on" id="asztalfoglalas" required>
                     <option value="one">1 Főre</option>
                     <option value="two">2 Főre</option>
                     <option value="three">3 Főre</option>
