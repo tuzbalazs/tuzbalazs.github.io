@@ -6,7 +6,11 @@
 html{
     background: url('../img/tasty_burger_restaurant.jpg') no-repeat center fixed; 
     background-size: cover;
-
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+    width: 100%;
 }
 
 body{
@@ -99,7 +103,6 @@ div.hamburger div{
 .container .flex-item .box .ul_flex {
     list-style-type: disc;
     text-align: justify;
-    flex-wrap: wrap;
     max-width: 300px;
     font-size: 18px;
     margin: 0;
@@ -172,6 +175,12 @@ label{
     display: block;
     text-align: center;
     text-shadow: 10px 10px 5px rgb(255, 230, 0);
+}
+div #form input[id="e-mail"]:focus{
+    border: 5px dashed rgb(242, 33, 33);
+}
+div #form input[id="e-mail"]:valid{
+    border: 5px solid rgb(12, 188, 12);
 }
 label:hover{
     color: rgba(255, 0, 0, 0.83);
@@ -362,7 +371,14 @@ background-color: rgba(40, 40, 40, 0.982);
 border-radius: 20px;
 opacity: 0.7;
 }
-
+.price_list{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(191, 39, 39);
+    text-decoration: underline;
+    padding: 10px;
+}
 /* index.html rész */
 .flex-container {
   margin: 0 auto;
@@ -377,25 +393,17 @@ opacity: 0.7;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .flex_text{
     width: 80%;
-    margin-bottom: 50px;
     text-align: justify;
     border-radius: 5px; 
     gap: 15px;
     padding: 20px;
     background-color: rgba(255, 72, 0, 0.83);
     border: 15px dotted rgb(1, 4, 22);
-}
-.price_list{
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: rgb(191, 39, 39);
-    text-decoration: underline;
-    padding: 10px;
+    margin: 10px;
 }
 h1{
     color: #f0d92e;
@@ -446,7 +454,6 @@ a{
     width: 30%;
     height: 30%;
     border-radius: 10px;
-    margin-bottom: 30px;
     border: solid 3px rgb(248, 243, 243);
 }
 footer{
@@ -621,7 +628,7 @@ main {
   .container .flex-item{
     width: 300px;
   }
-  h2{
+  h2, .cim_h2{
     font-size: 1.2em;
   }
   .intro_text{
@@ -635,4 +642,32 @@ main {
     width: 100%;
     padding: 3px;
   }
+  html{
+    background-size: cover;
+  }
+  h1{
+    font-size: 1.5em;
+  }
+  .flex_text{
+    width: 75%;
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px;
+  }
+  .nyitvatartas{
+    max-width: 75%;
+  }
+  div.kapcsolat{
+    max-width: 80%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+    .google_map{ 
+    width: 80%;
+    height: 80%;
+    }
+    .contact{
+        gap: 0;
+        
+    }
 }
