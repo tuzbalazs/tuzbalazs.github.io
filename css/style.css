@@ -101,12 +101,15 @@ div.hamburger div{
     align-items: center; 
 }
 .container .flex-item .box .ul_flex {
-    list-style-type: disc;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    list-style-type: none;
     text-align: justify;
     max-width: 300px;
     font-size: 18px;
     margin: 0;
-    padding-left: 20px;
+    padding: 0;
     color: #333;
 }
 
@@ -129,7 +132,7 @@ div.hamburger div{
 }
 .flex_h3{
     color: azure;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
 }
 /* contact.html rész */
 .flex-container_contact{
@@ -197,7 +200,7 @@ input[type], select{
 }
 input[type=submit]{
     width: 50%;
-    color: #333;
+    color: #121110;
     background-color:#f5f3f3;
     font-family: "Alfa Slab One", serif;
     height: 3em;
@@ -206,7 +209,7 @@ input[type=submit]{
     margin: 15px;
 }
 input[type=submit]:hover{
-    background-color: rgb(77, 72, 72);
+    background-color: rgba(206, 206, 206, 0.919);
     font-weight: bold;
 }
 .contact {
@@ -218,7 +221,7 @@ input[type=submit]:hover{
     padding: 30px;
 }
 .map, .kapcsolat {
-    flex: 1 1 400px;   /* rugalmas, de minimum 400px */
+    flex: 1 1 400px;
     height: 400px;
     box-sizing: border-box;
     border-radius: 15px;
@@ -229,7 +232,6 @@ input[type=submit]:hover{
     border: 10px dotted rgb(8, 3, 21);
 }
 
-/* Beágyazott térkép formázása */
 .google_map {
     width: 100%;
     height: 100%;
@@ -237,7 +239,6 @@ input[type=submit]:hover{
     border-radius: 15px;
 }
 
-/* Kapcsolati info doboz formázása */
 .kapcsolat {
     background-color: rgba(255, 72, 0, 0.83);
     color: white;
@@ -419,7 +420,8 @@ h1{
     text-align: center;
 }
 h2{
-    font-size: 2em;
+    font-family: "Bangers", system-ui;
+    font-size: 2.5em;
     color: #f0d92e;
     text-decoration: underline;
     text-shadow: 4px 4px #110054;
@@ -427,7 +429,9 @@ h2{
     padding: 15px;
 }
 .cim_h2{
-    font-size: 2em;
+    font-family: "Bangers", system-ui;
+    font-size: 400;
+    font-size: 2.5em;
     color: #fadd00;
     text-shadow: 4px 4px #110054;
     text-decoration: underline;
@@ -491,13 +495,10 @@ main {
 
 .image:hover {
     transform: scale(1.05);
-    /* Kép nagyítása hover-effektushoz */
 }
 
-/* A modális ablak */
 #modal {
     display: none;
-    /* Alapértelmezetten elrejtve */
     position: fixed;
     z-index: 1;
     left: 0;
@@ -508,16 +509,13 @@ main {
     overflow: auto;
 }
 
-/* A modális kép */
 #fullImage {
     margin: 0 auto;
     display: block;
     max-width: 80%;
     max-height: 80%;
-    
 }
 
-/* Az X gomb */
 #close {
     position: absolute;
     top: 20px;
@@ -531,35 +529,6 @@ main {
 
 
 /* reszponzivitás rész */
-
-@media (max-width: 600px)
-{
-  ul.navigation { 
-    position: absolute;
-    display: none;
-    flex-direction: column;
-    top: 60px;
-    left: 0;
-    background-color: #333;
-    width: 100%;
-    text-align: center;
-  }
-
-  ul.navigation.active {
-    display: flex;
-  }
-
-  div.hamburger {
-    display: flex;
-  } 
-}
-
-@media (max-width: 725px){
-.container .flex-item {
-        margin: 0 auto;
-    }
-} 
-
 @media (max-width: 900px) {
   .container {
     flex-direction: column;
@@ -591,6 +560,26 @@ main {
 }
 
 @media screen and (max-width: 600px){
+  /*navigáció-->*/
+  ul.navigation { 
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+    text-align: center;
+  }
+
+  ul.navigation.active {
+    display: flex;
+  }
+
+  div.hamburger {
+    display: flex;
+  } 
+  /*<--navigáció*/
   .flex-container .items {
     flex-direction: column;
   }
